@@ -1,12 +1,16 @@
 var userModel = require('./modal');
 var nodemailer = require('nodemailer');
 let userController = {};
-var vcardparser = require('	');
+var vcardparser = require('vcardparser');
 var vCardsJS = require('vcards-js');
+const { exec } = require('child_process');
 var cmd = require('node-cmd');
 const fs = require('fs');
-
+var request = require('request');
+var FormData = require('form-data');
+const readline = require('readline');
 const {google} = require('googleapis');
+const https = require('https');
 var vcard = require('vcard-json');
 
 
@@ -140,8 +144,8 @@ userController.uploadToDrive = function (req, res) {
 	
 	const oauth2Client = new google.auth.OAuth2('587952985192-jljuov8sjk2i2a1fi52rfi9f5b5sbi3a.apps.googleusercontent.com');
 	oauth2Client.setCredentials({
-		  refresh_token: '1//0gn46iWLWAav2CgYIARAAGBASNwF-L9Ir2TkN3_zjlukgpx-46Hl7YRetXyM3SYugKi7vk6dTtozcHH9_BpDGeYK37pNVVXu5_Ws',
-		  access_token: 'ya29.a0AfH6SMCSRXStfdlZ2hJL_z_REG8_MTh8oD6EljiWNgqk3-uHevfFEsM56rYv-TyiB8OcvpA_RNgn9aCunmzQYXlD8MLCG7eMAXsuxFwgeMbXNA90jmslDmfaQ5cWAOPX6iiY5Neznt0IeoU8jAW1X0hVVYHIkojUksY',
+		  refresh_token: '1//0gf5SKvM8qNJBCgYIARAAGBASNwF-L9Ir2NagVZ_dE0Uyf-yZuKEqcUdei1CKTObgljduqaVpj8n0PM9fmQSMuDJwh5A4pT3e0ac',
+		  access_token: 'ya29.a0AfH6SMCxsO4vyr1bW6py0A_8gg6RbQFh4Eovd7vz5f4heZoDZGz9kPxWE2XmDU_w51fytr46REsdAaz6m8ZbXn3EYeiSGXeW7UDhSZgYDryFyrUnsPyvG7qnl0XGbelOYRGGQGBUaosawbX0HJiM6QrA9CD68cEZmSg',
 	});
 	const drive = google.drive({ version: 'v3', auth: oauth2Client });
 

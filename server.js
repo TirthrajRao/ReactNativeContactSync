@@ -2,11 +2,6 @@ var exp = require('express');
 var mongoose = require('mongoose');
 var userController = require('./controller');
 var bodyParser = require('body-parser');
-var request = require('request');
-const fs = require('fs');
-const readline = require('readline');
-const {google} = require('googleapis');
-var FormData = require('form-data');
 var app = exp();
 mongoose.connect('mongodb://localhost:27017/employee', {useNewUrlParser: true})
 .then(() => console.log("Connected"))
