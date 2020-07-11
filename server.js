@@ -24,8 +24,8 @@ app.post('/user/changePassword',userController.changePassword)
 app.post('/user/createFile',userController.createFile)
 app.post('/user/upload-to-drive',userController.uploadToDrive)
 app.post('/user/readVCF',userController.readVCF)
-
-app.listen(4000);
+var port = process.env.PORT || 4000;
+app.listen(port);
 
 // var drive = google.drive({
 // 	version: 'v3',
