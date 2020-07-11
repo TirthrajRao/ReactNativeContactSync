@@ -1,16 +1,12 @@
 var userModel = require('./modal');
 var nodemailer = require('nodemailer');
 let userController = {};
-var vcardparser = require('vcardparser');
+var vcardparser = require('	');
 var vCardsJS = require('vcards-js');
-const { exec } = require('child_process');
 var cmd = require('node-cmd');
 const fs = require('fs');
-var request = require('request');
-var FormData = require('form-data');
-const readline = require('readline');
+
 const {google} = require('googleapis');
-const https = require('https');
 var vcard = require('vcard-json');
 
 
