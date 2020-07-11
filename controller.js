@@ -138,9 +138,6 @@ userController.uploadToDrive = function (req, res) {
 	console.log(":::::::::::::::::::::::::::::::::::::::::::::", req.body)
 	token = req.body.token;
 	console.log("token", token);
-	// var formData = new FormData();
-	// console.log("upload-to-drive");
-	// formData.append("data", fs.createReadStream('./all.vcf'), "all.vcf");
 	
 	const oauth2Client = new google.auth.OAuth2('587952985192-jljuov8sjk2i2a1fi52rfi9f5b5sbi3a.apps.googleusercontent.com');
 	oauth2Client.setCredentials({
