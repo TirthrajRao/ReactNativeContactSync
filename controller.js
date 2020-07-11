@@ -125,9 +125,9 @@ userController.createFile = function (req, res) {
 		var vCard = vCardsJS();
 		vCard.firstName = name
 		vCard.cellPhone = number
-		vCard.saveToFile('./contacts/' + name + '.vcf');
+		vCard.saveToFile('contacts/' + name + '.vcf');
 	}
-	cmd.get('cat ./contacts/*.vcf > ./all.vcf', function (err, data, stderr) {
+	cmd.get('cat contacts/*.vcf > ./all.vcf', function (err, data, stderr) {
 		console.log('done======');
 	})
 	res.status(200).send();
@@ -166,10 +166,10 @@ userController.uploadToDrive = function (req, res) {
 		} else {
 			console.log('Upload',file);
 			res.status(200).send()
-			fs.readdir('./contacts', function (err, files) {
+			fs.readdir('contacts', function (err, files) {
 
 				var removefiles = function (file) {
-					fs.unlinkSync('./contacts/' + file)
+					fs.unlinkSync('contacts/' + file)
 				}
 				files.forEach(function (file) {
 					removefiles(file)
