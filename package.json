@@ -23,7 +23,7 @@
     "googleapis": "^52.1.0",
     "mongoose": "^5.9.23",
     "node-cmd": "^3.0.0",
-    "nodemailer": "^6.4.10",
+    "nodemailer": "^6.4.16",
     "request": "^2.88.2",
     "vcard-json": "^0.5.2",
     "vcardparser": "^1.0.3",
